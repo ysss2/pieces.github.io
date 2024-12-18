@@ -1,12 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectable Highlight</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif KR', 'Arial', sans-serif;
+            font-size: 18px;
+            line-height: 1.95;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        div {
+            text-align: left;
+            max-width: 800px;
+        }
+        span {
+            display: inline;
+            user-select: text;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .refresh-icon {
+            display: inline;
+            font-size: 18px;
+            color: #555;
+            cursor: pointer;
+            transition: transform 0.3s ease, color 0.3s ease;
+            margin-left: 10px;
+        }
+        .refresh-icon:hover {
+            color: #000;
+            transform: rotate(360deg);
+        }
+        .highlight1:active, .highlight1.selected { background-color: #fff04d; }
+        .highlight2:active, .highlight2.selected { background-color: #00b3ff; }
+        .highlight3:active, .highlight3.selected { background-color: #ff0000; }
+        .highlight4:active, .highlight4.selected { background-color: #00ff11; }
+        .highlight5:active, .highlight5.selected { background-color: #8494b5; }
+        .highlight6:active, .highlight6.selected { background-color: #f56d18; }
+        .highlight7:active, .highlight7.selected { background-color: #6a45ff; }
+        .highlight8:active, .highlight8.selected { background-color: #aa92ff; }
+        .highlight9:active, .highlight9.selected { background-color: #e7a5be; }
+        .highlight10:active, .highlight10.selected { background-color: #b3624c; }
+        .highlight11:active, .highlight11.selected { background-color: #ff217d; }
+        .highlight12:active, .highlight12.selected { background-color: #02d8df; }
+        .highlight13:active, .highlight13.selected { background-color: #ba0000; }
+        .highlight14:active, .highlight14.selected { background-color: #8ff4ff; }
+        .highlight15:active, .highlight15.selected { background-color: #fff185; }
+        .highlight16:active, .highlight16.selected { background-color: #f0afc6; }
+        .highlight17:active, .highlight17.selected { background-color: #ffab04; }
+        .highlight18:active, .highlight18.selected { background-color: #06b706; }
+        .highlight19:active, .highlight19.selected { background-color: #a55bff; }
+        .highlight20:active, .highlight20.selected { background-color: #00ffaa; }
+        .highlight21:active, .highlight21.selected { background-color: #74efff; }
+    </style>
 </head>
 <body>
-  <p>Hello, World!</p>
+    <div>
+        <span class="highlight1" data-url="https://ysss2.github.io/dPtmf.github.io/">이 웹사이트는 12월 3일 새벽, 국회를 다녀와 친구집에서 잠을 자고 집으로 돌아오는 길 버스창문 넘어로 나를 계속해서 따라오는 햇빛의 모습에서부터 시작하였다.</span>
+        <span class="highlight2" data-url="https://ysss2.github.io/alsgk.github.io/">이따금씩 우리는 내부에서 외부를 엿보는 행위를 합니다.</span>
+        <span class="highlight3" data-url="https://yeah4671.github.io/Eunje.github.io/">우리의 대화는 선택과 침범의 연속이다. 내가 선택한 너이니 받아들여야 할까?</span>
+        <span class="highlight4" data-url="https://ysss2.github.io/tnal.github.io/">안과밖의 한정된 공간 그리고 반복되는 패턴을 텍스트로 풀어나간다.</span>
+        <span class="highlight5" data-url="https://ysss2.github.io/dlsdn.github.io/">시인은 시를 쓸때 어느 부분에서 글을 끊을지 어디를 띄어줄지 글줄의 형태까지 보면서 만든다는 내용을 본적이 있었는데</span>
+        <span class="highlight6" data-url="https://ysss2.github.io/tnals.github.io/">나는 완성되지 못한 것들의 무덤을 만드는데 재주가 있어서,</span>
+        <span class="highlight7" data-url="https://ysss2.github.io/tnals.github.io/">집에 혼자있는 것이 무서웠다.</span>
+        <span class="highlight8" data-url="https://ysss2.github.io/dofks.github.io/">혼자만의 공상에 빠져있을때면 가끔 이런 상상을 한다.</span>
+        <span class="highlight9" data-url="https://ysss2.github.io/dudtj.github.io/">아무렇게나 배출된 생각들은 겹겹이 쌓여 욕실을 가득 메우는 수증기가 되고 목욕 후 환기를 시키는 순간 흩어져 사라져 버린다.</span>
+        <span class="highlight10" data-url="https://ysss2.github.io/ektha.github.io/">내가 사는 곳은 계속 달라집니다. 친구 혹은 좋아하는 영화의 주인공도 사는 곳이 계속 달라집니다.</span>
+        <span class="highlight11" data-url="https://ysss2.github.io/guswls.github.io/">Are they asking where I was born or where I was raised?</span>
+        <span class="highlight12" data-url="https://yeah4671.github.io/Jeongsu.github.io/">ㅋㅋㅋㅋㅋ</span>
+        <span class="highlight13" data-url="https://yeah4671.github.io/Sua.github.io/">사실 저는 많이 힘들었던 기억들만 떠오릅니다.</span>
+        <span class="highlight14" data-url="https://yeah4671.github.io/Mijin.github.io/">"야! 내 말좀 들어봐, 우리 학교 이제 없어진대. 이름도 아예 사라질거래. 난 원래 이름이 더 좋은데... 이제는 아니래."</span>
+        <span class="highlight15" data-url="https://yeah4671.github.io/Seungah.github.io/">사라지는 듯하지만 흔적을 남기고, 그 흔적은 또 다른 새로운 글을 요구합니다.</span>
+        <span class="highlight16" data-url="https://yeah4671.github.io/Siho.github.io/">이 의식은 사라짐으로 채울 수 있는 행위입니다.</span>
+        <span class="highlight17" data-url="https://yeah4671.github.io/Yura.github.io/">베일에 싸인 그에 대한 기록은 흐리게 보이며 궁금증을 유발한다.</span>
+        <span class="highlight18" data-url="https://yeah4671.github.io/Star.github.io/">처음에는 아무것도 보이지 않습니다. 흰 배경만이 존재하고, 아무리 기다려도 변화가 없습니다.</span>
+        <span class="highlight19" data-url="https://yeah4671.github.io/Nahyun.github.io/">걸음을 움직일 때마다 새로운 풍경이 펼쳐지고, 생각의 나래가 끝없이 확장된다.</span>
+        <span class="highlight20" data-url="https://yeah4671.github.io/Yonggun.github.io/">삶이라는 건</span>
+        <span class="highlight21" data-url="https://yeah4671.github.io/YooSong.github.io/">지우개가루와 같이 아주 작은 구두점으로 변환될 수도 있다.</span>
+        <span class="refresh-icon" id="refresh" title="Reset Highlights">⟲</span>
+    </div>
+    <script>
+        const SPAN_STORAGE_KEY = 'highlightedSpans';
+
+        function loadHighlightState() {
+            const savedHighlights = JSON.parse(localStorage.getItem(SPAN_STORAGE_KEY)) || [];
+            savedHighlights.forEach(className => {
+                const span = document.querySelector(`.${className}`);
+                if (span) span.classList.add('selected');
+            });
+        }
+
+        function saveHighlightState() {
+            const selectedSpans = Array.from(document.querySelectorAll('span.selected')).map(span => {
+                return Array.from(span.classList).find(cls => cls.startsWith('highlight'));
+            });
+            localStorage.setItem(SPAN_STORAGE_KEY, JSON.stringify(selectedSpans));
+        }
+
+        document.querySelectorAll('span').forEach(span => {
+            span.addEventListener('click', () => {
+                if (span.classList.contains('selected')) {
+                    const url = span.getAttribute('data-url');
+                    if (url) {
+                        saveHighlightState();
+                        window.location.href = url;
+                    }
+                } else {
+                    span.classList.toggle('selected');
+                    saveHighlightState();
+                }
+            });
+        });
+
+        document.getElementById('refresh').addEventListener('click', () => {
+            document.querySelectorAll('span').forEach(span => {
+                span.classList.remove('selected');
+            });
+            localStorage.removeItem(SPAN_STORAGE_KEY);
+        });
+
+        loadHighlightState();
+    </script>
 </body>
 </html>
